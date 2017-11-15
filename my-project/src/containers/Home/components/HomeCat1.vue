@@ -2,7 +2,7 @@
   <div class="cat" id="cat1" >
       <div class="cat-head act-head">
           <p>精选专题</p>
-          <p class="see-more-content">查看更多</p>
+          <p @click="toList()" class="see-more-content">查看更多</p>
       </div>
       <ul class="mpdd-cat-list" ref="container" >
             <li class="mpdd-cat-item">
@@ -78,6 +78,9 @@ export default {
       })
       
       
+    },
+    toList(){
+        this.$router.push('/list')
     }
   },
   created(){

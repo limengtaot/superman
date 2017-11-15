@@ -1,26 +1,25 @@
 <template>
-  <div class="Home" id="Home">
+  <div class="Detail">
       <Home-header></Home-header>
-      <Home-cat></Home-cat>
-      <Home-cat1></Home-cat1>
+      <Content></Content>
   </div>
 </template>
 
 <script>
 
 import HomeHeader from '../.././components/HomeHeader'
-import HomeCat from './components/HomeCat'
-import HomeCat1 from './components/HomeCat1'
+import Content from './Content'
 
 export default {
-  name: 'Home',
-  components:{HomeHeader,HomeCat,HomeCat1}
+  name: 'Detail',
+  components:{HomeHeader,Content}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped  lang="scss">
-.Home{
-  visibility: visible;
+
+.Detail{
+    box-sizing:none;
 }
 </style>

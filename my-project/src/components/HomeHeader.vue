@@ -2,7 +2,7 @@
   <div>
         <div class="header">
             <div class="mpdd-top-logo">
-                <img src="../../../assets/mpdd_logo.png" />
+                <img src="../assets/mpdd_logo.png" />
             </div>
             <span>0.1元包邮抢16包清风面巾纸</span>
             <div class="mpdd-top-btn">前往购买</div>
@@ -10,21 +10,24 @@
         <div class="mpdd-head-wrapper">
             <ul class="mph-tab">
                 <li>
-                    <span class="mph-tab-item red-color-font">首页</span>
+                    <span @click="toHome()" class="mph-tab-item red-color-font">首页</span>
                     <span class="mph-tab-item">商家入驻</span>
                     <span class="mph-tab-item">帮助中心</span>
                 </li>
             </ul>
         </div>
-        <div class="mpdd-banner">
-            <img src="../../../assets/banner.jpg" alt="">
-        </div>
+        
   </div>
 </template>
 
 <script>
 export default {
-  name: 'header'
+  name: 'header',
+  methods:{
+    toHome(){
+     this.$router.push('/')
+    }
+  }
 }
 </script>
 
@@ -32,7 +35,7 @@ export default {
 <style scoped  lang="scss">
 .header{
     height:0.45rem;
-    background: url('../../../assets/mpdd_top_bg.png');
+    background: url('../assets/mpdd_top_bg.png');
     .mpdd-top-logo{
         position: relative;
         display: inline-block;
@@ -94,15 +97,6 @@ export default {
         }
     }
 }
-.mpdd-banner{
-        position: relative;
-        width: 100%;
-        height: 1.55rem;
-        background-color: #f3f3f3;
-        img{
-            width:100%;
-            height:1.4rem;
-        }
-}
+
 
 </style>

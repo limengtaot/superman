@@ -1,21 +1,27 @@
 <template>
-  <div class="cat" id="cat">
-      <div class="cat-head">
-          <p>精彩活动</p>
-          <p class="see-more-content">查看更多</p>
-      </div>
-      <div class="cat-content">
-          <div class="cat-content-left">
-              <img src="../../../assets/1.png" alt="" />
-              <img class="mal-you" src="../../../assets/2.png" alt="" />
-          </div>
-          <div class="cat-content-right">
-              <img src="../../../assets/3.jpg" alt="" />
-              <img class="mal-sale" src="../../../assets/4.png" alt="" />
-              <img class="mal-itry" src="../../../assets/5.jpg" alt="" />
-          </div>
-      </div>
-  </div>
+    <div>
+        <div class="mpdd-banner">
+                <img src="../../../assets/banner.jpg" alt="">
+        </div>
+        <div class="cat" id="cat">
+            <div class="cat-head">
+                <p>精彩活动</p>
+                <p @click="toList()" class="see-more-content">查看更多</p>
+            </div>
+            <div class="cat-content">
+                <div class="cat-content-left">
+                    <img src="../../../assets/1.png" alt="" />
+                    <img class="mal-you" src="../../../assets/2.png" alt="" />
+                </div>
+                <div class="cat-content-right">
+                    <img src="../../../assets/3.jpg" alt="" />
+                    <img class="mal-sale" src="../../../assets/4.png" alt="" />
+                    <img class="mal-itry" src="../../../assets/5.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+  
 </template>
 
 <script>
@@ -23,12 +29,27 @@
 
 
 export default {
-  name: 'cat'
+  name: 'cat',
+  methods:{
+    toList(){
+     this.$router.push('/list')
+    }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped  lang="scss">
+.mpdd-banner{
+        position: relative;
+        width: 100%;
+        height: 1.55rem;
+        background-color: #f3f3f3;
+        img{
+            width:100%;
+            height:1.4rem;
+        }
+}
 .cat{
     position: relative;
     .cat-head{
