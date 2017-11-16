@@ -1,6 +1,6 @@
 <template>
   <div>
-        <div class="header">
+        <div class="app-header">
             <div class="mpdd-top-logo">
                 <img src="../assets/mpdd_logo.png" />
             </div>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'header',
+  name: 'AppHeader',
   methods:{
     toHome(){
      this.$router.push('/')
@@ -33,7 +33,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped  lang="scss">
-.header{
+.app-header{
     height:0.45rem;
     background: url('../assets/mpdd_top_bg.png');
     .mpdd-top-logo{

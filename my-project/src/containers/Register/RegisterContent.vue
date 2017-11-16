@@ -1,21 +1,18 @@
 <template>
-  <div class="app-login container">
+  <div class="register-content">
+        <div class="register-head">
+            
+        </div>
   </div>
 </template>
 
 <script>
 
-
-
 export default {
-  name: 'AppLogin',
-  mounted(){
-      console.log(this.$store,12345)
-  }
+  name: 'RegisterContent'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped  lang="scss">
-
 </style>

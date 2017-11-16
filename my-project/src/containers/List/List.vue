@@ -1,6 +1,6 @@
 <template>
   <div class="List" id="List">
-      <Home-header></Home-header>
+      <AppHeader></AppHeader>
       <ListNav></ListNav>
       <ListContent></ListContent>
   </div>
@@ -8,13 +8,13 @@
 
 <script>
 
-import HomeHeader from '../.././components/HomeHeader'
+import AppHeader from '../.././components/AppHeader'
 import ListNav from './ListNav'
 import ListContent from './ListContent'
 
 export default {
   name: 'List',
-  components:{HomeHeader,ListNav,ListContent}
+  components:{AppHeader,ListNav,ListContent}
 }
 </script>
 

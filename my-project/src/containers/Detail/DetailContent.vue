@@ -26,7 +26,7 @@
             </div>
             <div class="Join-cat">
                 <div class="nav"><p>加入购物车</p></div>
-                 <div class="nav"><p>购物车</p></div>
+                 <div @click="toDetail()" class="nav"><p>购物车</p></div>
                 <div class="nav active"><p>立即购买</p></div>
             </div>
             <div>
@@ -56,34 +56,23 @@ export default {
     },
     methods:{
         getFilms(){
-            let that = this;
-            axios.get('/pdd/subject/999/sorted_goods?'+this.$route.params.id).then((res)=>{
+            const that = this;
+            axios.get("/pdd/"+that.$route.params.type+"?sort_type=PRIORITY&page=1&size=50",{
+
+            }).then((res)=>{
                 for(var i = 0; i < res.data.goods_list.length; i++){
                     if(that.$route.params.id == res.data.goods_list[i].goods_id){
                         that.films = res.data.goods_list[i];
-                        console.log(that.films)
                     }
                 }
-                
             })
         },
-        changeType(type){
-            this.films=[]
-            this.type=type
-            this.getFilms()
-        },
-        toDetail(id){
-        this.$router.push({name:'detail',params:{id}})
+        toDetail(){
+        this.$router.push({name:'cat'})
         }
     },
     created(){
         this.getFilms()
-    },
-    mounted(){
-        let that = this;
-        bus.$on("changeType",function (type) {
-            this.changeType(type)
-        }.bind(this))
     }
 }
 </script>

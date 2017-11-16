@@ -2,7 +2,7 @@
 <div class="list-content">
     <div class="content-glist">
         <ul class="glist-list">
-            <li @click="toDetail(film.goods_id)" class="list-item" v-for="film in films" :key="film.goods_id">
+            <li @click="toDetail(film.goods_id,type)" class="list-item" v-for="film in films" :key="film.goods_id">
                 <div class="list-img">
                     <img :src="film.hd_thumb_url">
                 </div>
@@ -37,16 +37,16 @@ export default {
 
             }).then((res)=>{
                 that.films = res.data.goods_list
-                console.log(that.films,that.type,1235)
             })
         },
         changeType(type){
             this.films=[]
-            this.type=type
+            let wxkdl = type
+            this.type=wxkdl
             this.getFilms()
         },
-        toDetail(id){
-        this.$router.push({name:'detail',params:{id}})
+        toDetail(id,type){
+        this.$router.push({name:'detail',params:{id,type}})
         }
     },
     created(){

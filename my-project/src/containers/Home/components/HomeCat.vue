@@ -3,7 +3,7 @@
         <div class="mpdd-banner">
                 <img src="../../../assets/banner.jpg" alt="">
         </div>
-        <div class="cat" id="cat">
+        <div class="mpdd-cat">
             <div class="cat-head">
                 <p>精彩活动</p>
                 <p @click="toList()" class="see-more-content">查看更多</p>
@@ -29,7 +29,7 @@
 
 
 export default {
-  name: 'cat',
+  name: 'MpddCat',
   methods:{
     toList(){
      this.$router.push('/list')
@@ -50,7 +50,7 @@ export default {
             height:1.4rem;
         }
 }
-.cat{
+.mpdd-cat{
     position: relative;
     .cat-head{
         position: relative;

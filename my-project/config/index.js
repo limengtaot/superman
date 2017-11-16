@@ -18,6 +18,13 @@ module.exports = {
             pathRewrite:{
               '^/pdd':'/'
             }
+          },
+          '/db':{
+            target:'http://mobile.yangkeduo.com/',
+            changeOrigin:true,
+            pathRewrite:{
+              '^/db':'/'
+            }
           }
     },
 

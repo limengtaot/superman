@@ -1,6 +1,6 @@
 <template>
-<div>
-    <div class="list-nav">
+<div class="list-nav">
+    <div class="list-nav-box">
         <div :class="{active:type=='subject/999/sorted_goods'}" @click="changeType('subject/999/sorted_goods')" class="nav">品牌清仓</div>
         <div :class="{active:type=='subject/996/sorted_goods'}" @click="changeType('subject/996/sorted_goods')" class="nav">限时秒杀</div>
         <div :class="{active:type=='operation/12/groups'}" @click="changeType('operation/12/groups')" class="nav">海淘专场</div>
@@ -40,7 +40,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped  lang="scss">
 
-.list-nav{
+.list-nav-box{
   border-bottom: solid #fe6e00 1px;
   height:.37rem;
   background:#ed435b;

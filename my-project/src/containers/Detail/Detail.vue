@@ -1,18 +1,18 @@
 <template>
   <div class="Detail">
-      <Home-header></Home-header>
-      <Content></Content>
+      <AppHeader></AppHeader>
+      <DetailContent></DetailContent>
   </div>
 </template>
 
 <script>
 
-import HomeHeader from '../.././components/HomeHeader'
-import Content from './Content'
+import AppHeader from '../.././components/AppHeader'
+import DetailContent from './DetailContent'
 
 export default {
   name: 'Detail',
-  components:{HomeHeader,Content}
+  components:{AppHeader,DetailContent}
 }
 </script>
 
